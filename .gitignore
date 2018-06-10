@@ -6,4 +6,8 @@ _site/
 
 # ruby
 /.bundle/
+<<<<<<< HEAD
 /vendor/bundle
+=======
+/vendor/bundler
+>>>>>>> e5cb3853e4f2224de001acc2d53244c9a6898cd2

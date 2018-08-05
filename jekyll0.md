@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 category: logs
 title: jekyllを用いたサイト構築記 vol.0
 ---

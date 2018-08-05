@@ -105,7 +105,7 @@ author:
   name             : "yto9"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Engineer(LOA)"
-  location         : "Tokyo, Japan"
+  location         : "http://amzn.asia/ebe5Dgv"
   email            : 
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
@@ -115,7 +115,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/yto9"
+  github           : "yto9"
   gitlab           :
   google_plus      :
   keybase          :
@@ -127,7 +127,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "https://twitter.com/yTo_9"
+  twitter          : "yTo_9"
   vine             :
   weibo            :
   xing             :

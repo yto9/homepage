@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "air" #"default", "air", "aqua", "contrast", "dark", 
 # Site Settings
 locale                   : "en-US"
 title                    : "full-scraτch"
-title_separator          : "|"
+title_separator          : "-"
 name                     : "Yusuke Tokunaga" # not author
 description              : "Everything I know, think and feel."
 url                      : "https://ytoku.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -105,7 +105,7 @@ author:
   name             : "yto9"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Engineer(LOA)"
-  location         : "http://amzn.asia/ebe5Dgv"
+  location         : 
   email            : 
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"

@@ -1,6 +1,7 @@
-
+{% if author.wishlist %}
   <li>
-    <a href="http://amzn.asia/ebe5Dgv" itemprop="sameAs">
+    <a href="{{ author.wishlist }}" itemprop="sameAs">
       <i class="fab fa-fw fa-amazon" aria-hidden="true"></i> Amazon wishlist
     </a>
   </li>
+{% endif %}

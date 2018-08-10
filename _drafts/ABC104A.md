@@ -21,13 +21,16 @@ tags: 競プロ AtCoder ABC104 100
 - 0 ≤ R ≤ 4208
 - R は整数。
 
-## 逡巡
-時系列: ABC -> ARC -> AGC \\
-境界: 
-0 1200 2800 4208 \\
-`未満`に注意 \\
-入力: 高橋くん単体のレートR \\
-出力: レート変動のあるコンテスト名 
+
+
+
+## 解法
+Rによって
+- ABC/ARC/AGC
+- ARC/AGC
+- AGC
+
+でレートが変動する場合があり，各々の場合に時系列的に最も早い上記の1番左にあるコンテスト名を返せば良い．
 ### コーナーケース検討
 - 変動する可能性があれば変動するとしてよさそう(変動可能性のあるコンテストに参加したが変動しないといったようなことは考えない)
 - 0 -> ABC
@@ -37,22 +40,18 @@ tags: 競プロ AtCoder ABC104 100
 - 2800 -> AGC
 - 4208 -> AGC
 
-## 解法
-Rによって
-- ABC/ARC/AGC
-- ARC/AGC
-- AGC
-
-でレートが変動する場合があり，各々の場合に時系列的に最も早い上記の1番左にあるコンテスト名を返せば良い．
 ## 実装
 Rでの場合分け．\\
-AGCは任意のケースでレート変動するのでデフォルトケースとしてelse文に置くのが気持ち的にいいかな．
+AGCは任意のケースでレート変動するのでデフォルトケースとして初期値に置くのが気持ち的にいいかな．
 ```cpp
+string ans = "AGC\n";
 if (R < 1200)
-    cout << "ABC\n";
+    ans = "ABC\n";
 else if (R < 2800)
-    cout << "ARC\n";
-else
-    cout << "AGC\n";
+    ans = "ARC\n";
+cout << ans;
 ```
-[Submission](https://abc104.contest.atcoder.jp/submissions/2951248){:target="_blank"}
+[Submission](https://abc104.contest.atcoder.jp/submissions/2977590){:target="_blank"}
+
+### データ構造・アルゴリズム
+特になし

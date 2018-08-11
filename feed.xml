@@ -1,1 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://ytoku.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ytoku.com/" rel="alternate" type="text/html" /><updated>2018-08-05T05:47:48+09:00</updated><id>https://ytoku.com/</id><title type="html">full-scraτch</title><subtitle>Everything I know, think and feel.</subtitle><author><name>yto9</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://ytoku.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ytoku.com/" rel="alternate" type="text/html" /><updated>2018-08-11T19:18:07+09:00</updated><id>https://ytoku.com/</id><title type="html">full-scraτch</title><subtitle>Everything I know, think and feel.</subtitle><author><name>yto9</name></author><entry><title type="html">C - All Green \| AtCoder Beginner Contest 104</title><link href="https://ytoku.com/writeup/ABC104C/" rel="alternate" type="text/html" title="C - All Green \| AtCoder Beginner Contest 104" /><published>2018-08-10T00:00:00+09:00</published><updated>2018-08-10T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC104C</id><content type="html" xml:base="https://ytoku.com/writeup/ABC104C/">&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/tasks/abc104_c&quot;&gt;C - All Green | AtCoder Beginner Contest 104&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;2^{D}&lt;/script&gt;以下の変数を2進表記で考え，下位bitから順に昇順に対応する点数帯をコンプリートするか否かに紐付ける．&lt;br /&gt;
+各状態で得点がGに到達していない場合はbitが0になってるもののうち最上位のものに対応する点数帯iの問題を最大&lt;script type=&quot;math/tex&quot;&gt;p_i - 1&lt;/script&gt;問解くことでGに到達できるか試みる(&lt;script type=&quot;math/tex&quot;&gt;p_i&lt;/script&gt;問解く場合は対応bitが1のときなので含めない)．&lt;/p&gt;
+
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;条件に&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;総合スコアを G 点以上にすることは可能である。
+とあるので特にコーナーケースは存在しなそう．&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+&lt;p&gt;2進数として扱う変数名を&lt;a href=&quot;https://abc104.contest.atcoder.jp/editorial&quot;&gt;解説&lt;/a&gt;の&lt;code class=&quot;highlighter-rouge&quot;&gt;mask&lt;/code&gt;のようにわかりやすくしておくと可読性が上がる．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;REP&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;対象の変数(ここでは&lt;code class=&quot;highlighter-rouge&quot;&gt;mask&lt;/code&gt;)の2進表記のbitの各桁に1が立っているか否かでの処理．
+今回はbitが立っている桁に対応する点数帯の問題をコンプリートしている場合の処理に割り当てている．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;REP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2進表記で1が立っている桁の点数体のコンプリート+&lt;code class=&quot;highlighter-rouge&quot;&gt;rest_max&lt;/code&gt;に対応する点数帯をp[rest_max]問未満解いてGに到達する場合&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rest_max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rest_max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;G&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s_m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A,Bをint型の正の整数とするとA/BでA/B以下の最初の整数値，A/B + (A%B!=0)でA/B以上の最初の整数値が取得できる．&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2977532&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;bit演算(&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;int型の扱い&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC104" /><category term="300" /><category term="int" /><category term="bit" /><summary type="html">C - All Green | AtCoder Beginner Contest 104</summary></entry><entry><title type="html">B - AcCepted \| AtCoder Beginner Contest 104</title><link href="https://ytoku.com/writeup/ABC104B/" rel="alternate" type="text/html" title="B - AcCepted \| AtCoder Beginner Contest 104" /><published>2018-08-10T00:00:00+09:00</published><updated>2018-08-10T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC104B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC104B/">&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/tasks/abc104_b&quot;&gt;B - AcCepted | AtCoder Beginner Contest 104&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1文字目’A’判定&lt;/li&gt;
+  &lt;li&gt;2文字目以降に大文字は1文字のみ&lt;/li&gt;
+  &lt;li&gt;その大文字は’C’である必要がありかつ2文字目でも末尾でもない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;2個目の条件が示す範囲は&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;4文字のとき
+    &lt;ul&gt;
+      &lt;li&gt;..X.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;10文字のとき
+    &lt;ul&gt;
+      &lt;li&gt;..XXXXXXX.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+&lt;p&gt;条件より大文字があるならば，2文字目でも末尾でもだめでありかつ’C’でなければ”WA\n”．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;FOR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()){&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isupper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'C'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;WA&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2968299&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;alphabetの大文字/小文字
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/locale/isupper/&quot;&gt;isupper()&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;ascii&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC104" /><category term="200" /><summary type="html">B - AcCepted | AtCoder Beginner Contest 104</summary></entry><entry><title type="html">A - Rated for Me \| AtCoder Beginner Contest 104</title><link href="https://ytoku.com/writeup/ABC104A/" rel="alternate" type="text/html" title="A - Rated for Me \| AtCoder Beginner Contest 104" /><published>2018-08-10T00:00:00+09:00</published><updated>2018-08-10T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC104A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC104A/">&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/tasks/abc104_a&quot;&gt;A - Rated for Me | AtCoder Beginner Contest 104&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;Rによって&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ABC/ARC/AGC&lt;/li&gt;
+  &lt;li&gt;ARC/AGC&lt;/li&gt;
+  &lt;li&gt;AGC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;でレートが変動する場合があり，各々の場合に時系列的に最も早い上記の1番左にあるコンテスト名を返せば良い．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;変動する可能性があれば変動するとしてよさそう(変動可能性のあるコンテストに参加したが変動しないといったようなことは考えない)&lt;/li&gt;
+  &lt;li&gt;0 -&amp;gt; ABC&lt;/li&gt;
+  &lt;li&gt;1199 -&amp;gt; ABC&lt;/li&gt;
+  &lt;li&gt;1200 -&amp;gt; ARC&lt;/li&gt;
+  &lt;li&gt;2799 -&amp;gt; ARC&lt;/li&gt;
+  &lt;li&gt;2800 -&amp;gt; AGC&lt;/li&gt;
+  &lt;li&gt;4208 -&amp;gt; AGC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+&lt;p&gt;Rでの場合分け．&lt;br /&gt;
+AGCは任意のケースでレート変動するのでデフォルトケースとして初期値に置くのが気持ち的にいいかな．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;AGC&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ABC&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ARC&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2977590&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC104" /><category term="100" /><summary type="html">A - Rated for Me | AtCoder Beginner Contest 104</summary></entry><entry><title type="html">AtCoder Beginner Contest 104</title><link href="https://ytoku.com/logs/ABC104/" rel="alternate" type="text/html" title="AtCoder Beginner Contest 104" /><published>2018-08-10T00:00:00+09:00</published><updated>2018-08-10T00:00:00+09:00</updated><id>https://ytoku.com/logs/ABC104</id><content type="html" xml:base="https://ytoku.com/logs/ABC104/">&lt;h2 id=&quot;日程&quot;&gt;日程&lt;/h2&gt;
+&lt;p&gt;2018/08/05 21:00:00 ~ 2018/08/05 22:40:00 &lt;br /&gt;
+100min&lt;/p&gt;
+
+&lt;h2 id=&quot;コンテスト中に考えていたこと&quot;&gt;コンテスト中に考えていたこと&lt;/h2&gt;
+&lt;h3 id=&quot;a--0406-ac&quot;&gt;A (-04:06 AC)&lt;/h3&gt;
+&lt;p&gt;時系列: ABC -&amp;gt; ARC -&amp;gt; AGC &lt;br /&gt;
+境界条件&lt;code class=&quot;highlighter-rouge&quot;&gt;未満&lt;/code&gt;に注意しよう &lt;br /&gt;
+変動可能性のあるコンテストに参加したが変動しないといったようなことは考えないでいいんだよな…？&lt;/p&gt;
+&lt;h3 id=&quot;b-0406---2011-wa&quot;&gt;B (04:06 - 20:11 WA)&lt;/h3&gt;
+&lt;p&gt;2個目の条件境界注意しないとな…　&lt;br /&gt;
+条件1&amp;amp;&amp;amp;2&amp;amp;&amp;amp;3のみ”AC”, ほとんどは”WA”っぽいな &lt;br /&gt;
+これどういう順で適用するのが綺麗に書けるんだろう&lt;/p&gt;
+&lt;h3 id=&quot;c-2011---9939-wa&quot;&gt;C (20:11 - 99:39 WA)&lt;/h3&gt;
+&lt;p&gt;総問題数は &lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^Dpi \le 10 \ast 100 = 10^3&lt;/script&gt;&lt;br /&gt;
+愚直に全探索するとすべての問題について解くか否かで状態数は&lt;script type=&quot;math/tex&quot;&gt;2^{1000}&lt;/script&gt;&lt;br /&gt;
+必要な最低問題数が知りたいんだから，ある点数帯をコンプリートしない場合は点数の高い順のはず&lt;br /&gt;
+これ点数が100点刻みな必要あるか…？&lt;br /&gt;
+completeボーナスを含めた各得点帯一問を解く期待値のpriority queueを作って&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;大きい順にp[i]個ずつの単位でGを超えなければ解く．&lt;/li&gt;
+  &lt;li&gt;超える場合は残っているもののうち単独での点数が最も高いものをp[i]未満使った場合と比較して少ない方を採用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;って感じの貪欲っぽい感じで行けると思ったが…WA(期待値が同じ値になる場合とかの考慮ができてないからWAなんだろうな)&lt;br /&gt;
+TLEはなんでだろう(-&amp;gt;TLEはfor文が無限ループになってた)&lt;br /&gt;
+同じ方針で解き直してみたら他にもバグを埋め込んでいたがそれを取り除いてもこの方針だとそもそもサンプルケースのような1問あたりの期待値が低いがそのゴールに到達するにはそっちを解いたほうがいい場合が考慮出来てないので&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2977721&quot;&gt;これ&lt;/a&gt;が限界ぽかった．&lt;/p&gt;
+
+&lt;h3 id=&quot;d&quot;&gt;D&lt;/h3&gt;
+&lt;p&gt;見てない&lt;/p&gt;
+
+&lt;h2 id=&quot;結果&quot;&gt;結果&lt;/h2&gt;
+&lt;p&gt;performance: 161 (自己最低)
+rank: 1819位
+&lt;img src=&quot;/images/abc104_rank.png&quot; alt=&quot;abc104_rank&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;所感&quot;&gt;所感&lt;/h2&gt;
+&lt;p&gt;うーむやばい笑(笑えない)
+&lt;img src=&quot;/images/abc104_submission.png&quot; alt=&quot;abc104_submission&quot; /&gt;
+B問題の後ろから2文字目という条件を誤実装していた…&lt;br /&gt;
+WA出ているのに気づいたのがCを提出した終了30秒前というね…&lt;br /&gt;
+そしてCも解けたわけではないという…&lt;br /&gt;
+次からCの問題読み終わったらstatusの確認しよう(自戒).&lt;/p&gt;
+
+&lt;h2 id=&quot;現状&quot;&gt;現状&lt;/h2&gt;
+&lt;p&gt;ついにratingが3桁になってしまった…&lt;br /&gt;
+今まで気が向いた時に参加して特に解き直しとかしてなかったけど反省しよう.&lt;br /&gt;
+これからは&lt;a href=&quot;http://chokudai.hatenablog.com/entry/2014/08/07/212849&quot;&gt;chokudaiさんのブログ&lt;/a&gt;にあるように取り組んだけど解けなかった問題は復習して&lt;a href=&quot;https://ytoku.com/categories/writeup&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;writeup&lt;/code&gt;&lt;/a&gt;にまとめよう…&lt;br /&gt;
+そしてお盆はC問題埋めてとりあえず水色復帰したい気持ち.
+&lt;img src=&quot;/images/abc104_rating.png&quot; alt=&quot;abc104_rating&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;学び&quot;&gt;学び&lt;/h2&gt;
+&lt;p&gt;今まで”Yes”/”No”とかで出力する時に&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;処理&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Yes&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;No&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;としていたけど&lt;a href=&quot;https://img.atcoder.jp/abc104/editorial.pdf&quot;&gt;解説&lt;/a&gt;にあるように&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Yes&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;処理&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;にした方がコードがスッキリする．&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC104" /><summary type="html">日程 2018/08/05 21:00:00 ~ 2018/08/05 22:40:00 100min</summary></entry></feed>

@@ -9,16 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Category - full-scraτch</title>
-<meta name="description" content="Everything I know, think and feel.">
+<!-- begin _includes/seo.html --><title>B - AcCepted | AtCoder Beginner Contest 104 - full-scraτch</title>
+<meta name="description" content="B - AcCepted | AtCoder Beginner Contest 104">
 
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="full-scraτch">
-<meta property="og:title" content="Posts by Category">
-<meta property="og:url" content="https://ytoku.com/categories/">
+<meta property="og:title" content="B - AcCepted | AtCoder Beginner Contest 104">
+<meta property="og:url" content="https://ytoku.com/writeup/ABC104B/">
+
+
+  <meta property="og:description" content="B - AcCepted | AtCoder Beginner Contest 104">
 
 
 
@@ -26,6 +29,7 @@
 
 
 
+  <meta property="article:published_time" content="2018-08-10T00:00:00+09:00">
 
 
 
@@ -36,7 +40,7 @@
   
 
 
-<link rel="canonical" href="https://ytoku.com/categories/">
+<link rel="canonical" href="https://ytoku.com/writeup/ABC104B/">
 
 
 
@@ -101,7 +105,7 @@
 
   </head>
 
-  <body class="layout--categories">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -164,7 +168,17 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Posts by Category</li>
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/writeup" itemprop="item"><span itemprop="name">Writeup</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">B - AcCepted \| AtCoder Beginner Contest 104</li>
       
     
   </ol>
@@ -277,64 +291,184 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="B - AcCepted | AtCoder Beginner Contest 104">
+    <meta itemprop="description" content="B - AcCepted | AtCoder Beginner Contest 104">
+    <meta itemprop="datePublished" content="August 10, 2018">
     
-      <h1 id="page-title" class="page__title">Posts by Category</h1>
-    
-    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">B - AcCepted | AtCoder Beginner Contest 104
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
 
+  less than 1 minute read
+</p>
+          
+        </header>
+      
 
-<ul class="taxonomy__index">
-  
-    
-      
-    
-      
-        <li>
-          <a href="#writeup">
-            <strong>writeup</strong> <span class="taxonomy__count">3</span>
-          </a>
-        </li>
-      
-    
-  
-    
-      
-    
-      
-    
-  
-    
-      
-        <li>
-          <a href="#logs">
-            <strong>logs</strong> <span class="taxonomy__count">1</span>
-          </a>
-        </li>
-      
-    
-      
-    
-  
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="https://abc104.contest.atcoder.jp/tasks/abc104_b">B - AcCepted | AtCoder Beginner Contest 104</a></p>
+
+<h2 id="解法">解法</h2>
+<ul>
+  <li>1文字目’A’判定</li>
+  <li>2文字目以降に大文字は1文字のみ</li>
+  <li>その大文字は’C’である必要がありかつ2文字目でも末尾でもない</li>
 </ul>
 
+<h3 id="コーナーケース検討">コーナーケース検討</h3>
+<p>2個目の条件が示す範囲は</p>
+<ul>
+  <li>4文字のとき
+    <ul>
+      <li>..X.</li>
+    </ul>
+  </li>
+  <li>10文字のとき
+    <ul>
+      <li>..XXXXXXX.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="実装">実装</h2>
+<p>条件より大文字があるならば，2文字目でも末尾でもだめでありかつ’C’でなければ”WA\n”．</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">isupper</span><span class="p">(</span><span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">])){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">i</span> <span class="o">==</span> <span class="n">S</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">S</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'C'</span><span class="p">){</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="s">"WA</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><a href="https://abc104.contest.atcoder.jp/submissions/2968299" target="_blank">Submission</a></p>
+
+<h3 id="データ構造アルゴリズム">データ構造・アルゴリズム</h3>
+<ul>
+  <li>alphabetの大文字/小文字
+    <ul>
+      <li><a href="http://www.cplusplus.com/reference/locale/isupper/">isupper()</a></li>
+      <li>ascii</li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
 
   
-    
   
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
-      <section id="writeup" class="taxonomy__section">
-        <h2 class="archive__subtitle">writeup</h2>
-        <div class="entries-list">
+      
+      
+      <a href="/tags/200" class="page__taxonomy-item" rel="tag">200</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/abc104" class="page__taxonomy-item" rel="tag">ABC104</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/atcoder" class="page__taxonomy-item" rel="tag">AtCoder</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/%E7%AB%B6%E3%83%97%E3%83%AD" class="page__taxonomy-item" rel="tag">競プロ</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/writeup" class="page__taxonomy-item" rel="tag">writeup</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-10T00:00:00+09:00">August 10, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=B+-+AcCepted+%5C%7C+AtCoder+Beginner+Contest+104%20https%3A%2F%2Fytoku.com%2Fwriteup%2FABC104B%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fytoku.com%2Fwriteup%2FABC104B%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=https%3A%2F%2Fytoku.com%2Fwriteup%2FABC104B%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fytoku.com%2Fwriteup%2FABC104B%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/writeup/ABC104A/" class="pagination--pager" title="A - Rated for Me | AtCoder Beginner Contest 104
+">Previous</a>
+    
+    
+      <a href="/writeup/ABC104C/" class="pagination--pager" title="C - All Green | AtCoder Beginner Contest 104
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
           
-            
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -357,40 +491,12 @@
 </p>
   </article>
 </div>
+        
           
-            
 
 
 
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/writeup/ABC104B/" rel="permalink">B - AcCepted | AtCoder Beginner Contest 104
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">B - AcCepted | AtCoder Beginner Contest 104
-
-</p>
-  </article>
-</div>
-          
-            
-
-
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -413,30 +519,12 @@
 </p>
   </article>
 </div>
+        
           
-        </div>
-        <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
-      </section>
-    
-  
-
-  
-    
-  
-    
-  
-
-  
-    
-      <section id="logs" class="taxonomy__section">
-        <h2 class="archive__subtitle">logs</h2>
-        <div class="entries-list">
-          
-            
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
     <h2 class="archive__item-title" itemprop="headline">
@@ -461,17 +549,11 @@
 </p>
   </article>
 </div>
-          
-        </div>
-        <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
-      </section>
-    
+        
+      </div>
+    </div>
   
-    
   
-
-
-  </div>
 </div>
     </div>
 

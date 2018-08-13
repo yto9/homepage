@@ -1,7 +1,7 @@
 ---
 layout: single
 categories: writeup
-title: \| AtCoder  Contest 
+title: \| AtCoder Beginner Contest 001
 tags: 競プロ AtCoder ABC104 100
 mathjax: true
 ---

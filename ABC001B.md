@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - 視程の通報 \| AtCoder Beginner Contest 001
-tags: 競プロ AtCoder ABC001 100
+tags: 競プロ AtCoder ABC001 100 setfill() setw() right() left() internal()
 mathjax: true
 ---
 

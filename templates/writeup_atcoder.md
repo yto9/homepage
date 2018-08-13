@@ -2,11 +2,11 @@
 layout: single
 categories: writeup
 title: \| AtCoder Beginner Contest 001
-tags: 競プロ AtCoder ABC104 100
+tags: 競プロ AtCoder ABC001 100
 mathjax: true
 ---
 
-[A - Rated for Me \| AtCoder Beginner Contest 104](https://beta.atcoder.jp/contests/abc001/tasks/abc001_1)
+[A - Rated for Me \| AtCoder Beginner Contest 001](https://beta.atcoder.jp/contests/abc001/tasks/abc001_1)
 
 ## 解法
 

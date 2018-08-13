@@ -29,7 +29,7 @@ else if (m <= 70000) ans = (m - 30000) / 5000 + 80;
 else ans = 89;
 cout << setfill('0') << setw(2) << right << ans << endl;
 ```
-[Submission](https://beta.atcoder.jp/contests/abc001/submissions/3001460){:target="_blank"}
+[Submission](https://beta.atcoder.jp/contests/abc001/submissions/3001603){:target="_blank"}
 
 ### データ構造・アルゴリズム
 - [Stream manipulators](http://www.cplusplus.com/reference/library/manipulators/)による出力フォーマット指定

@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: C - All Green \| AtCoder Beginner Contest 104
-tags: 競プロ AtCoder ABC104 300 int bit
+tags: 競プロ AtCoder ABC104 300 int bit演算
 mathjax: true
 ---
 

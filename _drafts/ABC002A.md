@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: A - 正直者 \| AtCoder Beginner Contest 002
-tags: 競プロ AtCoder ABC002 100
+tags: 競プロ AtCoder ABC002 100 max()
 mathjax: true
 ---
 

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC004 100
 mathjax: true
 ---
 
-[B - 回転 \| AtCoder Beginner Contest 004](https://beta.atcoder.jp/contests/abc004/tasks/abc004_1)
+[B - 回転 \| AtCoder Beginner Contest 004](https://beta.atcoder.jp/contests/abc004/tasks/abc004_2)
 
 ## 解法
 $$ c_{ij} (0 \le i,j \le n) $$ は180°回転すると$$ c_{(n-i)(n-j)} (0 \le i,j \le n) $$に対応する．

@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - AcCepted \| AtCoder Beginner Contest 104
-tags: 競プロ AtCoder ABC104 200
+tags: 競プロ AtCoder ABC104 200 isupper() ascii
 ---
 
 

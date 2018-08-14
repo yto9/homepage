@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - 投票 \| AtCoder Beginner Contest 008
-tags: 競プロ AtCoder ABC008 100 unordered_map() max_element()
+tags: 競プロ AtCoder ABC008 100 unordered_map max_element()
 mathjax: true
 ---
 
@@ -19,7 +19,7 @@ mathjax: true
 同数の場合はそのうち誰でもいい．
 
 ## 実装
-unordered_map()のoperator`[]`は存在しないkeyにアクセスするとdefault constructorによる要素生成(今回はintなので0初期化)を行うのでmp[s]++の部分は以下のような挙動になる．\\
+unordered_map()のoperator`[]`は存在しないkeyにアクセスするとdefault constructorによる要素生成(今回はintなので0初期化)を行うのでmp[s]++の部分は以下のような挙動になる．
 - (keyが存在しない) -> 0(生成) -> 1(後置インクリメント)
 - (keyが存在) -> mp[s]++(後置インクリメント)
 
@@ -39,6 +39,6 @@ cout << it.first << endl;
 [Submission](https://beta.atcoder.jp/contests/abc008/submissions/3005877){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- unordered_map()
+- unordered_map
     - operator[]
 - max_element()

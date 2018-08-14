@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - おいしいたこ焼きの食べ方 \| AtCoder Beginner Contest 005
-tags: 競プロ AtCoder ABC005 100 priority_queue()
+tags: 競プロ AtCoder ABC005 100 priority_queue
 mathjax: true
 ---
 
@@ -27,4 +27,7 @@ cout << pq.top() << endl;
 [Submission](https://beta.atcoder.jp/contests/abc005/submissions/3005071){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- [priority_queue()](http://www.cplusplus.com/reference/queue/priority_queue/)
+- [priority_queue](http://www.cplusplus.com/reference/queue/priority_queue/)
+    - [push()](http://www.cplusplus.com/reference/queue/priority_queue/push/)
+    - [pop()](http://www.cplusplus.com/reference/queue/priority_queue/pop/)
+    - [top()](http://www.cplusplus.com/reference/queue/priority_queue/top/)

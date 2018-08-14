@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - AtCoderトランプ  \| AtCoder Beginner Contest 003
-tags: 競プロ AtCoder ABC003 100 map() 符号化
+tags: 競プロ AtCoder ABC003 100 map 符号化
 mathjax: true
 ---
 
@@ -82,6 +82,6 @@ REP(i, S.size()) {
 
 
 ### データ構造・アルゴリズム
-- [map()](http://www.cplusplus.com/reference/map/map/)
+- [map](http://www.cplusplus.com/reference/map/map/)
 - 符号化
     - n進数を用いた符号化

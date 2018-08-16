@@ -1,12 +1,12 @@
 ---
 layout: single
 categories: writeup
-title: \| AtCoder Beginner Contest 015
+title: B - 高橋くんの集計 \| AtCoder Beginner Contest 015
 tags: 競プロ AtCoder ABC015 100 int
 mathjax: true
 ---
 
-[A - Rated for Me \| AtCoder Beginner Contest 015](https://beta.atcoder.jp/contests/abc015/tasks/abc015_2)
+[B - 高橋くんの集計 \| AtCoder Beginner Contest 015](https://beta.atcoder.jp/contests/abc015/tasks/abc015_2)
 
 ## 解法
 ループでバグの合計数とバグのあるプログラムの数を集計し，上司に報告するように平均値を整数に繰り上げて出力する．

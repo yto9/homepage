@@ -5,7 +5,7 @@ title: A - Rated for Me \| AtCoder Beginner Contest 104
 tags: 競プロ AtCoder ABC104 100
 ---
 
-[A - Rated for Me \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_a)
+[A - Rated for Me \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_a){:target="_blank"}
 
 ## 解法
 Rによって

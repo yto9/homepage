@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC004 100
 mathjax: true
 ---
 
-[A - 流行 \| AtCoder Beginner Contest 004](https://beta.atcoder.jp/contests/abc004/tasks/abc004_1)
+[A - 流行 \| AtCoder Beginner Contest 004](https://beta.atcoder.jp/contests/abc004/tasks/abc004_1){:target="_blank"}
 
 ## 解法
 高橋くんにお金貸したい…()

@@ -39,6 +39,6 @@ cout << it.first << endl;
 [Submission](https://beta.atcoder.jp/contests/abc008/submissions/3005877){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- unordered_map
-    - operator[]
-- max_element()
+- [unordered_map](http://www.cplusplus.com/reference/unordered_map/unordered_map/)
+    - [operator[]](http://www.cplusplus.com/reference/unordered_map/unordered_map/operator[]/)
+- [max_element()](http://www.cplusplus.com/reference/algorithm/max_element/)

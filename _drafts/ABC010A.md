@@ -18,5 +18,5 @@ mathjax: true
 [Submission](https://beta.atcoder.jp/contests/abc010/submissions/3006476){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- [string](www.cplusplus.com/reference/string/string/)
+- [string](http://www.cplusplus.com/reference/string/string/)
     - [連結(+)](http://www.cplusplus.com/reference/string/string/operator+/)

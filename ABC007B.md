@@ -22,6 +22,6 @@ else cout << "a" << endl;
 [Submission](https://beta.atcoder.jp/contests/abc007/submissions/3005668){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- string
+- [string](http://www.cplusplus.com/reference/string/string/)
     - [比較演算子（== != < <= > >=）](http://www.cplusplus.com/reference/string/string/operators/)
     - [copy()](http://www.cplusplus.com/reference/string/string/copy/)

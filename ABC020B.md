@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC020 100 stoi()
 mathjax: true
 ---
 
-[B - 足し算 \| AtCoder Beginner Contest 020](https://beta.atcoder.jp/contests/abc020/tasks/abc020_2)
+[B - 足し算 \| AtCoder Beginner Contest 020](https://beta.atcoder.jp/contests/abc020/tasks/abc020_b)
 
 ## 解法
 問題文通り計算する．

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC020 100
 mathjax: true
 ---
 
-[A - クイズ \| AtCoder Beginner Contest 020](https://beta.atcoder.jp/contests/abc020/tasks/abc020_1)
+[A - クイズ \| AtCoder Beginner Contest 020](https://beta.atcoder.jp/contests/abc020/tasks/abc020_a)
 
 ## 解法
 Qの値で出力を分岐するだけ．

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC006 100 FizzBuzz
 mathjax: true
 ---
 
-[A - 世界のFizzBuzz \| AtCoder Beginner Contest 006](https://beta.atcoder.jp/contests/abc006/tasks/abc006_1)
+[A - 世界のFizzBuzz \| AtCoder Beginner Contest 006](https://beta.atcoder.jp/contests/abc006/tasks/abc006_1){:target="_blank"}
 
 ## 解法
 [FizzBuzz](https://ja.wikipedia.org/wiki/Fizz_Buzz)の一種．\\

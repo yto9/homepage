@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC005 100 priority_queue
 mathjax: true
 ---
 
-[B - おいしいたこ焼きの食べ方 \| AtCoder Beginner Contest 005](https://beta.atcoder.jp/contests/abc005/tasks/abc005_2)
+[B - おいしいたこ焼きの食べ方 \| AtCoder Beginner Contest 005](https://beta.atcoder.jp/contests/abc005/tasks/abc005_2){:target="_blank"}
 
 ## 解法
 入力の文字がうまく表示されてなくてぎょっとするが特に問題に影響はしない．

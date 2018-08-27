@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC007 100
 mathjax: true
 ---
 
-[A - 植木算 \| AtCoder Beginner Contest 007](https://beta.atcoder.jp/contests/abc007/tasks/abc007_1)
+[A - 植木算 \| AtCoder Beginner Contest 007](https://beta.atcoder.jp/contests/abc007/tasks/abc007_1){:target="_blank"}
 
 ## 解法
 n-1を出力する．

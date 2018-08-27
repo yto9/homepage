@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC003 100 等差数列
 mathjax: true
 ---
 
-[A - AtCoder社の給料 \| AtCoder Beginner Contest 003](https://beta.atcoder.jp/contests/abc003/tasks/abc003_1)
+[A - AtCoder社の給料 \| AtCoder Beginner Contest 003](https://beta.atcoder.jp/contests/abc003/tasks/abc003_1){:target="_blank"}
 
 ## 解法
 得られる給料の期待値を求める．\\

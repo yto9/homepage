@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC010 100 vector push_back()
 mathjax: true
 ---
 
-[B - 花占い \| AtCoder Beginner Contest 010](https://beta.atcoder.jp/contests/abc010/tasks/abc010_2)
+[B - 花占い \| AtCoder Beginner Contest 010](https://beta.atcoder.jp/contests/abc010/tasks/abc010_2){:target="_blank"}
 
 ## 解法
 なぎさちゃんに軽く狂気を感じるが…\\

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC008 100
 mathjax: true
 ---
 
-[A - アルバム \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_1)
+[A - アルバム \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_1){:target="_blank"}
 
 ## 解法
 T - (S - 1)を出力する．

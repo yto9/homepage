@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC002 100
 mathjax: true
 ---
 
-[B - 罠 \| AtCoder Beginner Contest 002](https://beta.atcoder.jp/contests/abc002/tasks/abc002_2)
+[B - 罠 \| AtCoder Beginner Contest 002](https://beta.atcoder.jp/contests/abc002/tasks/abc002_2){:target="_blank"}
 
 ## 解法
 - 文字列を走査し母音以外を1字毎に出力する

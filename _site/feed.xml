@@ -1,247 +1,169 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://ytoku.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ytoku.com/" rel="alternate" type="text/html" /><updated>2018-08-14T17:26:50+09:00</updated><id>https://ytoku.com/</id><title type="html">full-scraτch</title><subtitle>Everything I know, think and feel.</subtitle><author><name>yto9</name></author><entry><title type="html">B - 花占い \| AtCoder Beginner Contest 010</title><link href="https://ytoku.com/writeup/ABC010B/" rel="alternate" type="text/html" title="B - 花占い \| AtCoder Beginner Contest 010" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC010B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC010B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc010/tasks/abc010_2&quot;&gt;B - 花占い | AtCoder Beginner Contest 010&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://ytoku.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ytoku.com/" rel="alternate" type="text/html" /><updated>2018-08-27T19:20:05+09:00</updated><id>https://ytoku.com/</id><title type="html">full-scraτch</title><subtitle>Everything I know, think and feel.</subtitle><author><name>yto9</name></author><entry><title type="html">B - N重丸 \| AtCoder Beginner Contest 026</title><link href="https://ytoku.com/writeup/ABC026B/" rel="alternate" type="text/html" title="B - N重丸 \| AtCoder Beginner Contest 026" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC026B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC026B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc026/tasks/abc026_b&quot; target=&quot;_blank&quot;&gt;B - N重丸 | AtCoder Beginner Contest 026&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;なぎさちゃんに軽く狂気を感じるが…&lt;br /&gt;
-枚数を3で割った余りが2または偶数ではいけない．&lt;br /&gt;
-nも$a_i$の最大値も小さいのでwhile文でカウントするだけ．&lt;/p&gt;
+&lt;p&gt;与えられる半径を降順にソートし順に加算，減算を繰り返し和を取り最後に円周率をかけ出力する．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;今回は問題ないが，2乗の和等を取る時にintをはみ出ないか注意する．&lt;/p&gt;
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+&lt;p&gt;円周率はmath.hで定義されている．M_PIを使う．また，デフォルトでは浮動小数点数は6桁(処理系依存？)しか表示されないので，小数点第6位まで表示されるように&lt;code class=&quot;highlighter-rouge&quot;&gt;fixed&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;setprecision&lt;/code&gt;を用いて出力formatを指定する．
+&lt;a href=&quot;https://beta.atcoder.jp/contests/abc026/submissions/3088945&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/library/manipulators/&quot;&gt;Stream manipulators&lt;/a&gt;による出力フォーマット指定
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/ios/fixed/&quot;&gt;fixed&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/iomanip/setprecision/&quot;&gt;setprecision()&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC026" /><category term="100" /><summary type="html">B - N重丸 | AtCoder Beginner Contest 026</summary></entry><entry><title type="html">A - 掛け算の最大値 \| AtCoder Beginner Contest 026</title><link href="https://ytoku.com/writeup/ABC026A/" rel="alternate" type="text/html" title="A - 掛け算の最大値 \| AtCoder Beginner Contest 026" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC026A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC026A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc026/tasks/abc026_a&quot; target=&quot;_blank&quot;&gt;A - 掛け算の最大値 | AtCoder Beginner Contest 026&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;ループでA通りの積(A-i)*iのパターンを取り最大値を返す．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;A*0も最大値となることはないので含めてもどちらでも構わない．&lt;/p&gt;
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc026/submissions/3088854&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;特になし&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC026" /><category term="100" /><summary type="html">A - 掛け算の最大値 | AtCoder Beginner Contest 026</summary></entry><entry><title type="html">B - 双子とスイカ割り \| AtCoder Beginner Contest 025</title><link href="https://ytoku.com/writeup/ABC025B/" rel="alternate" type="text/html" title="B - 双子とスイカ割り \| AtCoder Beginner Contest 025" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC025B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC025B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc025/tasks/abc025_b&quot; target=&quot;_blank&quot;&gt;B - 双子とスイカ割り | AtCoder Beginner Contest 025&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;“East”,”West”どちらかを正方向とし全ての指示された距離を制約に従い&lt;script type=&quot;math/tex&quot;&gt;d \lt A&lt;/script&gt;ならA，&lt;script type=&quot;math/tex&quot;&gt;d \gt B&lt;/script&gt; ならBに変換しつつ足し合わせ，その正負で方角を判断する．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;出力時方角があればd &amp;gt; 0とし，0のときはフォーマットが違うことに注意．&lt;/p&gt;
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc025/submissions/3088703&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC025" /><category term="100" /><summary type="html">B - 双子とスイカ割り | AtCoder Beginner Contest 025</summary></entry><entry><title type="html">A - 25個の文字列 \| AtCoder Beginner Contest 025</title><link href="https://ytoku.com/writeup/ABC025A/" rel="alternate" type="text/html" title="A - 25個の文字列 \| AtCoder Beginner Contest 025" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC025A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC025A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc025/tasks/abc025_a&quot; target=&quot;_blank&quot;&gt;A - 25個の文字列 | AtCoder Beginner Contest 025&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;stringの配列を25個用意し辞書順に格納し，指定されたindexの文字列を返す．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;1-indexでNが与えられることに注意．&lt;/p&gt;
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+&lt;p&gt;c++でstring同士は&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;で連結出来るが，char同士は出来ないことに注意する．
+&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2977590&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/&quot;&gt;string&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC025" /><category term="100" /><category term="string" /><summary type="html">A - 25個の文字列 | AtCoder Beginner Contest 025</summary></entry><entry><title type="html">B - 自動ドア \| AtCoder Beginner Contest 024</title><link href="https://ytoku.com/writeup/ABC024B/" rel="alternate" type="text/html" title="B - 自動ドア \| AtCoder Beginner Contest 024" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC024B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC024B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc024/tasks/abc024_b&quot; target=&quot;_blank&quot;&gt;B - 自動ドア | AtCoder Beginner Contest 024&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;A_i (i \ge 2)&lt;/script&gt;の時 &lt;script type=&quot;math/tex&quot;&gt;A_{i-1} \sim A_i&lt;/script&gt; までの間にドアが空いている時間は&lt;script type=&quot;math/tex&quot;&gt;min(T, A_i - A_{i-1})&lt;/script&gt;なのでこの和を取ればいい．&lt;/p&gt;
+&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;A_N \sim T&lt;/script&gt; 秒間は必ず開いている．&lt;br /&gt;
+これ&lt;script type=&quot;math/tex&quot;&gt;A \ge 86400&lt;/script&gt; だと今日じゃなくないか…？と問題文だけだと思ったが，test case 3を見ると1日を溢れていてもカウントしているようなのでそこから24時間以降のドアが空いている時間の扱いを判断する．(&lt;code class=&quot;highlighter-rouge&quot;&gt;今日&lt;/code&gt;がどこまでを指しているのかがあいまいなので問題文で制約をもっとかけてほしい)
+&lt;br /&gt;
+この問題は一度もドアが空いている間に次の人が来ない場合に最大&lt;script type=&quot;math/tex&quot;&gt;N * T \le 10^{10}&lt;/script&gt;秒なのでギリギリint型に収まるが，sumを取る場合はlong long型の使用も検討する．&lt;/p&gt;
+&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc024/submissions/3088464&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/algorithm/min/&quot;&gt;min()&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC024" /><category term="100" /><category term="min()" /><summary type="html">B - 自動ドア | AtCoder Beginner Contest 024</summary></entry><entry><title type="html">A - 動物園 \| AtCoder Beginner Contest 024</title><link href="https://ytoku.com/writeup/ABC024A/" rel="alternate" type="text/html" title="A - 動物園 \| AtCoder Beginner Contest 024" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC024A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC024A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc024/tasks/abc024_a&quot; target=&quot;_blank&quot;&gt;A - 動物園 | AtCoder Beginner Contest 024&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
 
 &lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;花びらが1枚のときには嫌いにはならないので条件を満たさないことはない．&lt;/p&gt;
+&lt;p&gt;割引は全員に適用される(団体数以上の人のみではない)．
+割引後の価格が負になることはない(&lt;script type=&quot;math/tex&quot;&gt;C \le S \le T&lt;/script&gt;より)&lt;/p&gt;
 &lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;REP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;p&gt;普通に場合分けしてもいいが，以下のように書くことで(S + T &amp;gt;= K)はtrueならばfalseならば0にキャストされるので場合分けを式の中に含めることができ，一行で書ける．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;C&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc010/submissions/3006540&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc024/submissions/3088213&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/vector/vector/&quot;&gt;vector&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/vector/vector/push_back/&quot;&gt;push_back()&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC010" /><category term="100" /><category term="vector" /><category term="push_back()" /><summary type="html">B - 花占い | AtCoder Beginner Contest 010</summary></entry><entry><title type="html">A - ハンドルネーム \| AtCoder Beginner Contest 010</title><link href="https://ytoku.com/writeup/ABC010A/" rel="alternate" type="text/html" title="A - ハンドルネーム \| AtCoder Beginner Contest 010" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC010A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC010A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc010/tasks/abc010_1&quot;&gt;A - ハンドルネーム  | AtCoder Beginner Contest 010&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC024" /><category term="100" /><summary type="html">A - 動物園 | AtCoder Beginner Contest 024</summary></entry><entry><title type="html">B - 手芸王 \| AtCoder Beginner Contest 023</title><link href="https://ytoku.com/writeup/ABC023B/" rel="alternate" type="text/html" title="B - 手芸王 \| AtCoder Beginner Contest 023" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC023B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC023B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc023/tasks/abc023_b&quot; target=&quot;_blank&quot;&gt;B - 手芸王 | AtCoder Beginner Contest 023&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;入力に”pp”を連結して出力する．&lt;/p&gt;
-
+&lt;p&gt;最終的に行うことは正しく生成された場合のN文字の文字列との一致検証．&lt;/p&gt;
 &lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;特になし&lt;/p&gt;
+&lt;p&gt;手順0の場合のみ手順3nとは違う操作なので注意．&lt;br /&gt;
+手順通り行うと偶数文字になることはない．&lt;/p&gt;
 &lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc010/submissions/3006476&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;www.cplusplus.com/reference/string/string/&quot;&gt;string&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/operator+/&quot;&gt;連結(+)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC010" /><category term="100" /><category term="string" /><summary type="html">A - ハンドルネーム | AtCoder Beginner Contest 010</summary></entry><entry><title type="html">B - 心配性な富豪、ファミリーレストランに行く。 \| AtCoder Beginner Contest 009</title><link href="https://ytoku.com/writeup/ABC009B/" rel="alternate" type="text/html" title="B - 心配性な富豪、ファミリーレストランに行く。 \| AtCoder Beginner Contest 009" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC009B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC009B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc009/tasks/abc009_2&quot;&gt;B - 心配性な富豪、ファミリーレストランに行く。  | AtCoder Beginner Contest 009&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;文章量の割に必要な情報が少ない．&lt;br /&gt;
-set&lt;int&gt;を使い金額をuniqueに格納する．デフォルトだと昇順なのでrbegin()を用いイテレータを1つ進めたところの値を出力する．&lt;/int&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;全ての料理の金額が同じであることはない．とあるので2&amp;lt;=Nより必ず2番目に高い料理が存在する．&lt;/p&gt;
-
-&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-&lt;p&gt;rbegin()を1つ進めることで2番目に高い料理の値段が得られる．&lt;/p&gt;
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;REP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;p&gt;試行数を問われているので，以下の&lt;code class=&quot;highlighter-rouge&quot;&gt;res&lt;/code&gt;のようにループのインデックスをループの外で宣言することでその値を利用する．&lt;/p&gt;
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'c'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'b'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;st&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rbegin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;S&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc009/submissions/3006296&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc023/submissions/3088066&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/set/&quot;&gt;set&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/&quot;&gt;string&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/set/set/insert/&quot;&gt;insert()&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/set/set/rbegin/&quot;&gt;rbegin()&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/operators/&quot;&gt;比較演算子（== != &amp;lt; &amp;lt;= &amp;gt; &amp;gt;=）&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC009" /><category term="100" /><summary type="html">B - 心配性な富豪、ファミリーレストランに行く。 | AtCoder Beginner Contest 009</summary></entry><entry><title type="html">A - 引越し作業 \| AtCoder Beginner Contest 009</title><link href="https://ytoku.com/writeup/ABC009A/" rel="alternate" type="text/html" title="A - 引越し作業 \| AtCoder Beginner Contest 009" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC009A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC009A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc009/tasks/abc009_1&quot;&gt;A - 引越し作業 | AtCoder Beginner Contest 009&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC023" /><category term="100" /><category term="string" /><summary type="html">B - 手芸王 | AtCoder Beginner Contest 023</summary></entry><entry><title type="html">A - 加算王 \| AtCoder Beginner Contest 023</title><link href="https://ytoku.com/writeup/ABC023A/" rel="alternate" type="text/html" title="A - 加算王 \| AtCoder Beginner Contest 023" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC023A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC023A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc023/tasks/abc023_a&quot; target=&quot;_blank&quot;&gt;A - 加算王 | AtCoder Beginner Contest 023&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;出来るだけ両手を使うのが往復回数を減らすのには必要なので，両手を使う場合はN/2回．片手を使う場合はN%2回．
-必要な往復数はint型でN/2+N%2．&lt;/p&gt;
+&lt;p&gt;n進数の各桁を取り扱いたい場合は，nでの商，余りを考えればいい．今回はXが10進数なので10で割った商がXの10の位で，余りが1の位になる．&lt;/p&gt;
 &lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;N == 1の時 0 + 1 = 1でこれを満たす．&lt;/p&gt;
+&lt;p&gt;2桁の入力しかないので問題ないことは保証されている．&lt;/p&gt;
 &lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc009/submissions/3006076&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc023/submissions/3059045&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;int型の扱い&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC009" /><category term="100" /><category term="int" /><summary type="html">A - 引越し作業 | AtCoder Beginner Contest 009</summary></entry><entry><title type="html">B - 投票 \| AtCoder Beginner Contest 008</title><link href="https://ytoku.com/writeup/ABC008B/" rel="alternate" type="text/html" title="B - 投票 \| AtCoder Beginner Contest 008" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC008B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC008B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc008/tasks/abc008_2&quot;&gt;B - 投票 | AtCoder Beginner Contest 008&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC023" /><category term="100" /><category term="int" /><summary type="html">A - 加算王 | AtCoder Beginner Contest 023</summary></entry><entry><title type="html">B - Bumble Bee \| AtCoder Beginner Contest 022</title><link href="https://ytoku.com/writeup/ABC022B/" rel="alternate" type="text/html" title="B - Bumble Bee \| AtCoder Beginner Contest 022" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC022B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC022B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc022/tasks/abc022_b&quot; target=&quot;_blank&quot;&gt;B - Bumble Bee | AtCoder Beginner Contest 022&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;名前をkeyとしてその得票数をvalueとする連想配列を用いそこから最大valueを持つkeyを返す．&lt;br /&gt;
-特にkeyでsortする必要はないのでunordered_map&amp;lt;string,int&amp;gt;を利用する．&lt;/p&gt;
+&lt;p&gt;出てきた順に格納しておき，二度目以降の場合にはカウントしていく．&lt;/p&gt;
 
 &lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;票数は必ず1以上であることが保証されている．&lt;br /&gt;
-無記名票等はなし．&lt;br /&gt;
-同数の場合はそのうち誰でもいい．&lt;/p&gt;
+&lt;p&gt;同一種類の花にn回訪れるとn-1個の花が受粉する．&lt;/p&gt;
 
 &lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-&lt;p&gt;unordered_map()のoperator&lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt;は存在しないkeyにアクセスするとdefault constructorによる要素生成(今回はintなので0初期化)を行うのでmp[s]++の部分は以下のような挙動になる．&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;(keyが存在しない) -&amp;gt; 0(生成) -&amp;gt; 1(後置インクリメント)&lt;/li&gt;
-  &lt;li&gt;(keyが存在) -&amp;gt; mp[s]++(後置インクリメント)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;そうして得票数がmpに格納出来たので，max_element()を用いてvalueが最大値を示すiteratorを取得し，そのkeyを出力する．&lt;/p&gt;
 &lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;unordered_map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;unordered_map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;REP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;mp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),[](&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pair&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc008/submissions/3005877&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc022/submissions/3058958&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;unordered_map
+  &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/unordered_map/unordered_map/&quot;&gt;unordered_map&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;operator[]&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/unordered_map/unordered_map/operator[]/&quot;&gt;operator[]&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;max_element()&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC008" /><category term="100" /><category term="unordered_map" /><category term="max_element()" /><summary type="html">B - 投票 | AtCoder Beginner Contest 008</summary></entry><entry><title type="html">A - アルバム \| AtCoder Beginner Contest 008</title><link href="https://ytoku.com/writeup/ABC008A/" rel="alternate" type="text/html" title="A - アルバム \| AtCoder Beginner Contest 008" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC008A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC008A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc008/tasks/abc008_1&quot;&gt;A - アルバム | AtCoder Beginner Contest 008&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC022" /><category term="100" /><category term="unordered_map" /><summary type="html">B - Bumble Bee | AtCoder Beginner Contest 022</summary></entry><entry><title type="html">A - Best Body \| AtCoder Beginner Contest 022</title><link href="https://ytoku.com/writeup/ABC022A/" rel="alternate" type="text/html" title="A - Best Body \| AtCoder Beginner Contest 022" /><published>2018-08-27T00:00:00+09:00</published><updated>2018-08-27T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC022A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC022A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc022/tasks/abc022_a&quot; target=&quot;_blank&quot;&gt;A - Best Body | AtCoder Beginner Contest 022&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;T - (S - 1)を出力する．&lt;/p&gt;
+&lt;p&gt;入力取得時に&lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;日目の体重が条件を満たしているかカウントする．&lt;/p&gt;
 &lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;S == 1の場合も S == Tの場合も同様で問題ない．&lt;/p&gt;
-
+&lt;p&gt;体重は&lt;script type=&quot;math/tex&quot;&gt;10^5 \times 1000&lt;/script&gt;なのでintに収まる．&lt;/p&gt;
 &lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://abc104.contest.atcoder.jp/submissions/2977590&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc022/submissions/3058929&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC008" /><category term="100" /><summary type="html">A - アルバム | AtCoder Beginner Contest 008</summary></entry><entry><title type="html">B - 辞書式順序 \| AtCoder Beginner Contest 007</title><link href="https://ytoku.com/writeup/ABC007B/" rel="alternate" type="text/html" title="B - 辞書式順序 \| AtCoder Beginner Contest 007" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC007B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC007B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc007/tasks/abc007_2&quot;&gt;B - 辞書式順序 | AtCoder Beginner Contest 007&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;|A| &amp;gt; 1の時は|A|の末尾一文字削って，|A|==1の時はA[0]==’a’の時は-1,それ以外はA[0]-1を出力する．という方針でやったのが&lt;a href=&quot;https://beta.atcoder.jp/contests/abc007/submissions/3005613&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;だが，文字列のコピーは終端文字(‘\0’)の扱いがセンシティブになるので出来るだけ使用は避けたい．&lt;br /&gt;
-一個目の条件に引っ張られたがそもそも”a”以外の文字列より”a”の方が小さいのでA=”a”以外の時は”a”を返すことにする．&lt;/p&gt;
-&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;A = “a” の場合 -1を返す．&lt;/p&gt;
-&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc007/submissions/3005668&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;string
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/operators/&quot;&gt;比較演算子（== != &amp;lt; &amp;lt;= &amp;gt; &amp;gt;=）&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cplusplus.com/reference/string/string/copy/&quot;&gt;copy()&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC007" /><category term="100" /><category term="string" /><category term="copy()" /><summary type="html">B - 辞書式順序 | AtCoder Beginner Contest 007</summary></entry><entry><title type="html">A - 植木算 \| AtCoder Beginner Contest 007</title><link href="https://ytoku.com/writeup/ABC007A/" rel="alternate" type="text/html" title="A - 植木算 \| AtCoder Beginner Contest 007" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC007A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC007A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc007/tasks/abc007_1&quot;&gt;A - 植木算 | AtCoder Beginner Contest 007&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;n-1を出力する．&lt;/p&gt;
-
-&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;n &amp;gt;= 1なので問題ない．&lt;/p&gt;
-&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc007/submissions/3005498&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC007" /><category term="100" /><summary type="html">A - 植木算 | AtCoder Beginner Contest 007</summary></entry><entry><title type="html">B - トリボナッチ数列 \| AtCoder Beginner Contest 006</title><link href="https://ytoku.com/writeup/ABC006B/" rel="alternate" type="text/html" title="B - トリボナッチ数列 \| AtCoder Beginner Contest 006" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC006B</id><content type="html" xml:base="https://ytoku.com/writeup/ABC006B/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc006/tasks/abc006_2&quot;&gt;B - トリボナッチ数列 | AtCoder Beginner Contest 006&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0#%E9%A0%85%E6%95%B0%E3%81%AE%E5%A4%89%E6%9B%B4&quot;&gt;フィボナッチ数&lt;/a&gt;の3つ版．フィボナッチは人名だが項数が増えた版は冗談のような名付けになっている．&lt;br /&gt;
-実装方法はフィボナッチと同じく再帰．愚直に計算すると&lt;script type=&quot;math/tex&quot;&gt;O(n!)&lt;/script&gt;となってしまうが，再帰関数の返り値をメモ化することで&lt;script type=&quot;math/tex&quot;&gt;O(n)&lt;/script&gt;で求められる．&lt;/p&gt;
-&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;10007で割った余りを出力する．&lt;/p&gt;
-&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-&lt;p&gt;配列は初期化子リスト{}で指定しなかった要素は0初期化されるので{}で全要素を0初期化出来る．また代入式はその代入される変数の変わりに使用できるのでtri()のreturn文は以下のように書ける．&lt;/p&gt;
-&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define MOD 10007
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//0-initialized&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MOD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// return memo[n] = (tri(n - 1) + tri(n - 2) + tri(n - 3))%MOD;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;memo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc006/submissions/3005254&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;br /&gt;
-上記のソースコードでコメントアウトしてある順で記述すると
-&lt;img src=&quot;/images/tribonacchi.png&quot; alt=&quot;tribonacchi&quot; /&gt;
-上図のように実行速度，使用メモリ量ともに増加するのでtri(x)で出来るだけメモ化された値を再利用する(xが小さい順に計算される)ようにした方が効率がいい(この問題自体はどちらでもAC)．&lt;br /&gt;
-&lt;a href=&quot;https://beta.atcoder.jp/contests/abc006/submissions/3005257&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://msdn.microsoft.com/ja-jp/library/w7wd1177.aspx&quot;&gt;初期化&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;配列
-        &lt;ul&gt;
-          &lt;li&gt;初期化子{}&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;再帰&lt;/li&gt;
-  &lt;li&gt;メモ化
-    &lt;ul&gt;
-      &lt;li&gt;初期化(今回は0初期化)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;余り&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC006" /><category term="100" /><category term="初期化" /><category term="メモ化" /><category term="余り" /><summary type="html">B - トリボナッチ数列 | AtCoder Beginner Contest 006</summary></entry><entry><title type="html">A - 世界のFizzBuzz \| AtCoder Beginner Contest 006</title><link href="https://ytoku.com/writeup/ABC006A/" rel="alternate" type="text/html" title="A - 世界のFizzBuzz \| AtCoder Beginner Contest 006" /><published>2018-08-14T00:00:00+09:00</published><updated>2018-08-14T00:00:00+09:00</updated><id>https://ytoku.com/writeup/ABC006A</id><content type="html" xml:base="https://ytoku.com/writeup/ABC006A/">&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc006/tasks/abc006_1&quot;&gt;A - 世界のFizzBuzz | AtCoder Beginner Contest 006&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;解法&quot;&gt;解法&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://ja.wikipedia.org/wiki/Fizz_Buzz&quot;&gt;FizzBuzz&lt;/a&gt;の一種．&lt;br /&gt;
-3が含まれる場合とあるが入力がひと桁のみなので単に3で割り切れるかどうかの判断のみでいい．&lt;br /&gt;
-仮に複数桁の入力を許すとしたらwhile文で10の商と余りをチェックする感じかな&lt;/p&gt;
-
-&lt;h3 id=&quot;コーナーケース検討&quot;&gt;コーナーケース検討&lt;/h3&gt;
-&lt;p&gt;特になし．&lt;/p&gt;
-&lt;h2 id=&quot;実装&quot;&gt;実装&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://beta.atcoder.jp/contests/abc006/submissions/3005119&quot; target=&quot;_blank&quot;&gt;Submission&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;データ構造アルゴリズム&quot;&gt;データ構造・アルゴリズム&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ja.wikipedia.org/wiki/Fizz_Buzz&quot;&gt;FizzBuzz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC006" /><category term="100" /><category term="FizzBuzz" /><summary type="html">A - 世界のFizzBuzz | AtCoder Beginner Contest 006</summary></entry></feed>
+&lt;p&gt;特になし&lt;/p&gt;</content><author><name>yto9</name></author><category term="競プロ" /><category term="AtCoder" /><category term="ABC022" /><category term="100" /><summary type="html">A - Best Body | AtCoder Beginner Contest 022</summary></entry></feed>

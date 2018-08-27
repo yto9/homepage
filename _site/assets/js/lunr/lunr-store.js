@@ -26,7 +26,7 @@ var store = [{
         "teaser":null},{
         "title": "B - 視程の通報 \\| AtCoder Beginner Contest 001",
         "excerpt":"B - 視程の通報 | AtCoder Beginner Contest 001 解法 指示通りに条件分岐するだけだが入力は条件はで指定されていることに注意．境界が含むかどうかに注意． コーナーケース検討 指定された範囲ではやなど想定されていない範囲があるが，問題文にその範囲の入力はないとある．除算があるが，VVが整数値になる入力しかないとあるのでこちらも気にしないでいい． 実装 指定された範囲はそれぞれ排反なのでelse文を有効活用する．コーナーケース検討時に考えたことを踏まえ以下のように実装するととなる下限の部分はelseで賄われているのでわざわざ や などと条件を記述しなくて良い．仮にそうするならば最後のelse文をelse ifとしないと(回答としては問題がないが)途中で抜け落ちたや  が最後のelse文に含まれてしまい気持ち悪い．出力に関してはVVが1桁かどうか判定して先頭に’0’を足してもいいが，出力フォーマットを指定できるStream manipulatorsがc++のiostreamには用意されているのでそれを用いた． if (m &lt; 100) ans = 0;else if (m &lt;= 5000) ans = m * 10 / 1000;else if (m &lt;= 30000) ans = m / 1000 + 50;else if (m &lt;= 70000) ans = (m - 30000) / 5000 + 80;else ans = 89;cout &lt;&lt; setfill('0') &lt;&lt; setw(2) &lt;&lt; right &lt;&lt; ans &lt;&lt; endl;Submission データ構造・アルゴリズム   Stream manipulatorsによる出力フォーマット指定          setfill()      setw()      right()      left()      internal()      ","categories": ["writeup"],
-        "tags": ["競プロ","AtCoder","ABC001","100","setfill()","setw()","right()","left()","internal()"],
+        "tags": ["競プロ","AtCoder","ABC001","100","stream_manipulators"],
         "url": "https://ytoku.com/writeup/ABC001B/",
         "teaser":null},{
         "title": "A - 正直者 \\| AtCoder Beginner Contest 002",
@@ -118,4 +118,164 @@ var store = [{
         "excerpt":"B - 花占い | AtCoder Beginner Contest 010 解法 なぎさちゃんに軽く狂気を感じるが…枚数を3で割った余りが2または偶数ではいけない．nも$a_i$の最大値も小さいのでwhile文でカウントするだけ． コーナーケース検討 花びらが1枚のときには嫌いにはならないので条件を満たさないことはない． 実装     int count = 0;    vector&lt;int&gt; a;    REP(i, n) {        int tmp;        cin &gt;&gt; tmp;        a.push_back(tmp);    }    for (auto x: a) {        while(x % 3 == 2|| x % 2 == 0) {            count++;            x--;        }    }    cout &lt;&lt; count &lt;&lt; endl;Submission データ構造・アルゴリズム   vector          push_back()      ","categories": ["writeup"],
         "tags": ["競プロ","AtCoder","ABC010","100","vector","push_back()"],
         "url": "https://ytoku.com/writeup/ABC010B/",
+        "teaser":null},{
+        "title": "A - 来月は何月？ \\| AtCoder Beginner Contest 011",
+        "excerpt":"A - 来月は何月？  | AtCoder Beginner Contest 011 解法 12月以外はN+1を返せばいい． コーナーケース検討 12月は1を返す． 実装 三項演算子を使った．三項演算子の返り値はexpressionなので以下のように()で括る必要がある． cout &lt;&lt; ((N != 12) ? N + 1: 1) &lt;&lt; endl;Submission データ構造・アルゴリズム   三項演算子(?)","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC011","100","三項演算子?"],
+        "url": "https://ytoku.com/writeup/ABC011A/",
+        "teaser":null},{
+        "title": "B - 名前の確認 \\| AtCoder Beginner Contest 011",
+        "excerpt":"B - 名前の確認 | AtCoder Beginner Contest 011 解法 1文字目だけ大文字であとは小文字にする． コーナーケース検討 1文字しか無い場合はサンプルケースのように大文字1文字返せばいいので特に問題はない． 実装 tolower()/toupper()は該当するasciiコードの場合以外はそのままの値を返すのでこれらを使うとスッキリ書ける． for(int i = 1; i &lt; S.size(); i++) S[i] = tolower(S[i]);S[0] = toupper(S[0]);Submission データ構造・アルゴリズム   toupper()  tolower()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC011","100","toupper()","tolower()"],
+        "url": "https://ytoku.com/writeup/ABC011B/",
+        "teaser":null},{
+        "title": "A - スワップ \\| AtCoder Beginner Contest 012",
+        "excerpt":"A - スワップ | AtCoder Beginner Contest 012 解法 入れ替えて出力するだけ コーナーケース検討 特になし 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC012","100"],
+        "url": "https://ytoku.com/writeup/ABC012A/",
+        "teaser":null},{
+        "title": "B - 入浴時間 \\| AtCoder Beginner Contest 012",
+        "excerpt":"B - 入浴時間 | AtCoder Beginner Contest 012 解法 秒を3600や60との余りや除算を用いて変換する． コーナーケース検討 0&lt;= hh, mm , ss &lt;= 59 各値がひと桁のときは0埋め右詰めでhh:mm:ssとする． 実装 それぞれ以下のように求まる． int h = N / 3600;int m = (N % 3600) / 60;int s = N % 60;出力の整形にはsetw()，setfill()を用いる． cout &lt;&lt; setfill('0') &lt;&lt; setw(2) &lt;&lt; h &lt;&lt; \":\" &lt;&lt; setw(2) &lt;&lt; m &lt;&lt; \":\" &lt;&lt; setw(2) &lt;&lt; s &lt;&lt; endl;Submission データ構造・アルゴリズム   int型の除算  Stream manipulatorsによる出力フォーマット指定          setfill()      setw()      ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC012","100","stream_manipulators","int"],
+        "url": "https://ytoku.com/writeup/ABC012B/",
+        "teaser":null},{
+        "title": "A - A \\| AtCoder Beginner Contest 013",
+        "excerpt":"A - A | AtCoder Beginner Contest 013 解法 与えられるアルファベットがA~Eなので全パターンを直打ちしてもいいが，ascii値を使って’A’との距離を計算する． コーナーケース検討 ‘A’が0ではなく1に注意． 実装 cout &lt;&lt; X - 'A' + 1 &lt;&lt; endl;Submission データ構造・アルゴリズム   ascii","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC013","100","ascii"],
+        "url": "https://ytoku.com/writeup/ABC013A/",
+        "teaser":null},{
+        "title": "B - 錠 \\| AtCoder Beginner Contest 013",
+        "excerpt":"B - 錠 | AtCoder Beginner Contest 013 解法 0-&gt;9, 9-&gt;0をまたぐ場合とまたがない場合のうち小さい方を出力する． コーナーケース検討 a!=bとなっているがあってもなくても特に影響しない 実装 絶対値を取るabs()を使えば必要な回数は0-&gt;9,9-&gt;0をまたがない場合はabs(b-a)，またぐ場合は10 - abs(b-a)となる． cout &lt;&lt; min(abs(b - a),10 - (b - a)) &lt;&lt; endl;Submission データ構造・アルゴリズム   min()  abs()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC013","100","min()","abs()"],
+        "url": "https://ytoku.com/writeup/ABC013B/",
+        "teaser":null},{
+        "title": "A - けんしょう先生のお菓子配り \\| AtCoder Beginner Contest 014",
+        "excerpt":"A - けんしょう先生のお菓子配り | AtCoder Beginner Contest 014 解法 買い足す個数は   持っているお菓子の数が生徒数で割り切れれば          0        割り切れなければ          b - a%b        コーナーケース検討         a,bは0になることはない．         実装         cout &lt;&lt; ((a%b == 0) ? 0 : b - a%b) &lt;&lt; endl;                    Submission データ構造・アルゴリズム   int型の扱い  三項演算子(?)","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC014","100","int","三項演算子?"],
+        "url": "https://ytoku.com/writeup/ABC014A/",
+        "teaser":null},{
+        "title": "B - 価格の合計 \\| AtCoder Beginner Contest 014",
+        "excerpt":"B - 価格の合計 | AtCoder Beginner Contest 014 解法 問題文の誘導どおりにXの2進表記のi番目のbitが立っているかどうかを判定し和を取る． コーナーケース検討 価格の総和は  程度なのでintに収まる． 実装 Xの2進表記のi番目のbitが立っているかどうかをX &amp; (1 « i)で判定出来る． int a[20] = {};int sum = 0;REP(i, n){    cin &gt;&gt; a[i];}REP(i, n){    if (X &amp; (1 &lt;&lt; i)) sum += a[i]; }cout &lt;&lt; sum &lt;&lt; endl;Submission データ構造・アルゴリズム   bit演算","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC014","100","bit"],
+        "url": "https://ytoku.com/writeup/ABC014B/",
+        "teaser":null},{
+        "title": "A - 高橋くんの研修 \\| AtCoder Beginner Contest 015",
+        "excerpt":"A - 高橋くんの研修 | AtCoder Beginner Contest 015 解法 文字列のうち大きい方の文字列を返す． コーナーケース検討 同じ長さであることはないことが保証されている． 実装 stringのsize()を比較する．Submission データ構造・アルゴリズム   三項演算子(?)","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC015","100","三項演算子?"],
+        "url": "https://ytoku.com/writeup/ABC015A/",
+        "teaser":null},{
+        "title": "B - 高橋くんの集計 \\| AtCoder Beginner Contest 015",
+        "excerpt":"B - 高橋くんの集計 | AtCoder Beginner Contest 015 解法 ループでバグの合計数とバグのあるプログラムの数を集計し，上司に報告するように平均値を整数に繰り上げて出力する． コーナーケース検討 ソフトウェアのバグの合計数が0でないことは保証されている．(以下のコードで0除算になることは無い) 実装 A,Bをint型の正の整数とするとA/BでA/B以下の最初の整数値，A/B + (A%B!=0)でA/B以上の最初の整数値が取得できる． int N; cin &gt;&gt; N;int A[100];int sum = 0;int num_p = 0;REP(i,N) {    cin &gt;&gt; A[i];    if (A[i] &gt; 0) {        num_p++;        sum += A[i];    }}cout &lt;&lt; sum/num_p + (sum%num_p != 0) &lt;&lt; endl;Submission データ構造・アルゴリズム   int型の扱い","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC015","100","int"],
+        "url": "https://ytoku.com/writeup/ABC015B/",
+        "teaser":null},{
+        "title": "A - 12月6日 \\| AtCoder Beginner Contest 016",
+        "excerpt":"A - 12月6日 | AtCoder Beginner Contest 016 解法 月を日で割って余りが出るか否かで判定する． コーナーケース検討 特になし 実装 Submission データ構造・アルゴリズム   三項演算子?","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC016","100","三項演算子?"],
+        "url": "https://ytoku.com/writeup/ABC016A/",
+        "teaser":null},{
+        "title": "B - A±B Problem \\| AtCoder Beginner Contest 016",
+        "excerpt":"B - A±B Problem | AtCoder Beginner Contest 016 解法 問題分から条件は2つありそれぞれの条件を満たす場合をp,mとした時   p&amp;&amp;m  p  m  !p&amp;&amp;!mと場合分けして対応する記号を出力すればいい． コーナーケース検討 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC016","100"],
+        "url": "https://ytoku.com/writeup/ABC016B/",
+        "teaser":null},{
+        "title": "A - プロコン \\| AtCoder Beginner Contest 017",
+        "excerpt":"A - プロコン | AtCoder Beginner Contest 017 解法 割合の計算をして総和をとる． コーナーケース検討 sは10の倍数なので演算途中に小数となることはない． 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC017","100"],
+        "url": "https://ytoku.com/writeup/ABC017A/",
+        "teaser":null},{
+        "title": "B - choku語 \\| AtCoder Beginner Contest 017",
+        "excerpt":"B - choku語 | AtCoder Beginner Contest 017 解法 1文字ずつ見ていきc,o,k,u以外の文字が出てきたらNO, またcの次にはhが来ていなければNO，それ以外はYESを返す． コーナーケース検討 cが最後に来ている場合に注意． 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC017","100"],
+        "url": "https://ytoku.com/writeup/ABC017B/",
+        "teaser":null},{
+        "title": "A - 豆まき  \\| AtCoder Beginner Contest 018",
+        "excerpt":"A - 豆まき | AtCoder Beginner Contest 018 解法 全部で3人しかいないのでそのうち最大値の人が1位，最小値の人が3位，残りの人を2位とする． コーナーケース検討 三人の得点は互いに異なることが保証されている． 実装 Submission データ構造・アルゴリズム   max()  min()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC018","100","max()","min()"],
+        "url": "https://ytoku.com/writeup/ABC018A/",
+        "teaser":null},{
+        "title": "B - 文字列の反転 \\| AtCoder Beginner Contest 018",
+        "excerpt":"B - 文字列の反転 | AtCoder Beginner Contest 018 解法 問題文どおりに番目と番目の間の文字列を反転する． コーナーケース検討 1文字目が0番目ではなく1から始まっていることに注意．またreverse()の引数の指定の仕方にも注意． 実装 入力を受けるとともに処理をすればl,rは以下のように再利用できる． string S; cin &gt;&gt; S;int N; cin &gt;&gt; N;int l, r;auto itr = S.begin();REP(i, N) {    cin &gt;&gt; l &gt;&gt; r;    reverse(itr + (l - 1), itr + r);}cout &lt;&lt; S &lt;&lt; endl;Submission データ構造・アルゴリズム   reverse()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC018","100","reverse()"],
+        "url": "https://ytoku.com/writeup/ABC018B/",
+        "teaser":null},{
+        "title": "A - 高橋くんと年齢 \\| AtCoder Beginner Contest 019",
+        "excerpt":"A - 高橋くんと年齢 | AtCoder Beginner Contest 019 解法 小さい順にソートし2番目の値を出力する． コーナーケース検討 同じ数を許容する． 実装 同じ数を許容できるようmultiset()を用いた． multiset&lt;int&gt; mst;REP(i, 3) {    int x; cin &gt;&gt; x;    mst.insert(x);}auto itr = mst.begin();cout &lt;&lt; *++itr &lt;&lt; endl;Submission データ構造・アルゴリズム   multiset()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC019","100","multiset()"],
+        "url": "https://ytoku.com/writeup/ABC019A/",
+        "teaser":null},{
+        "title": "B - 高橋くんと文字列圧縮 \\| AtCoder Beginner Contest 019",
+        "excerpt":"B - 高橋くんと文字列圧縮 | AtCoder Beginner Contest 019 解法 回答用の文字列を用意し，前から順に文字列を見ていき新しい文字が出てきたらそれを回答用の文字列に追加し，同じ文字の間は個数をカウントし，違う文字が出てきたらそのカウントを回答用の文字列に連結する．これを繰り返す． コーナーケース検討 特になし 実装 string s; cin &gt;&gt; s;string ans = \"\";char pre = ' ';REP(i, s.size()) {    if(s[i] != pre) {        pre = s[i];        ans += s[i];        int cnt = 1;        while(i &lt; s.size() - 1 &amp;&amp; pre == s[i + 1]) {            i++;            cnt++;        }        ans += to_string(cnt);    }}cout &lt;&lt; ans &lt;&lt; endl;Submission データ構造・アルゴリズム   to_string()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC019","100","to_string()"],
+        "url": "https://ytoku.com/writeup/ABC019B/",
+        "teaser":null},{
+        "title": "A - クイズ \\| AtCoder Beginner Contest 020",
+        "excerpt":"A - クイズ | AtCoder Beginner Contest 020 解法 Qの値で出力を分岐するだけ． コーナーケース検討 入力はQが1か2のみ 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC020","100"],
+        "url": "https://ytoku.com/writeup/ABC020A/",
+        "teaser":null},{
+        "title": "B - 足し算 \\| AtCoder Beginner Contest 020",
+        "excerpt":"B - 足し算 | AtCoder Beginner Contest 020 解法 問題文通り計算する． コーナーケース検討 特になし． 実装 入力をstringとして取ることで，簡単に結合でき，その後stoi()を用い計算する． string A, B; cin &gt;&gt; A &gt;&gt; B;A += B;cout &lt;&lt; stoi(A)*2 &lt;&lt; endl;Submission データ構造・アルゴリズム   stoi()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC020","100","stoi()"],
+        "url": "https://ytoku.com/writeup/ABC020B/",
+        "teaser":null},{
+        "title": "A - 足し算 \\| AtCoder Beginner Contest 021",
+        "excerpt":"A - 足し算 | AtCoder Beginner Contest 021 解法 同じ2の累乗数をいくつ使ってもいいとあるのでこの問題の範囲では1をN個とすればよいが，各2の累乗数の使用回数を1回以下と考えると2の累乗数の和でNを表すというのはNを2進数表記することなので今回はその方針で解いた． コーナーケース検討 N&lt;=10なので4bitあれば表現できる． 実装 REP(i, 4) {    if (N &amp; 1 &lt;&lt; i){        count++;    }}cout &lt;&lt; count &lt;&lt; endl;REP(i, 4) {    if (N &amp; 1 &lt;&lt; i){        cout &lt;&lt; (1 &lt;&lt; i) &lt;&lt; endl;    }}Submission データ構造・アルゴリズム   bit演算","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC021","100","bit"],
+        "url": "https://ytoku.com/writeup/ABC021A/",
+        "teaser":null},{
+        "title": "B - 嘘つきの高橋くん \\| AtCoder Beginner Contest 021",
+        "excerpt":"B - 嘘つきの高橋くん | AtCoder Beginner Contest 021 解法 最短路の可能性があるかの判定問題．町同士の位置関係や距離(重み付け)等もないので，単に1度訪れた町をもう一度経由する(グラフとして見た時に閉路)場合は最短路ではないことはわかる． コーナーケース検討 出発地点とゴール地点が，ではないことに注意． 実装 aとbは訪れているということにしておき，に以前に訪れていた場合には最短路ではないと判定．． int visited[101] = {};int a, b; cin &gt;&gt; a &gt;&gt; b;visited[a]++; visited[b]++;int K; cin &gt;&gt; K;string ans = \"YES\";REP(i, K) {    int tmp; cin &gt;&gt; tmp;    if (visited[tmp] == 1) {        ans = \"NO\";        break;    }    visited[tmp]++;}cout &lt;&lt; ans &lt;&lt; endl;Submission データ構造・アルゴリズム   最短路","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC021","100"],
+        "url": "https://ytoku.com/writeup/ABC021B/",
+        "teaser":null},{
+        "title": "A - Best Body \\| AtCoder Beginner Contest 022",
+        "excerpt":"A - Best Body | AtCoder Beginner Contest 022 解法 入力取得時に日目の体重が条件を満たしているかカウントする． コーナーケース検討 体重はなのでintに収まる． 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC022","100"],
+        "url": "https://ytoku.com/writeup/ABC022A/",
+        "teaser":null},{
+        "title": "B - Bumble Bee \\| AtCoder Beginner Contest 022",
+        "excerpt":"B - Bumble Bee | AtCoder Beginner Contest 022 解法 出てきた順に格納しておき，二度目以降の場合にはカウントしていく． コーナーケース検討 同一種類の花にn回訪れるとn-1個の花が受粉する． 実装 int N; cin &gt;&gt; N;unordered_map&lt;int, int&gt; ump;int res = 0;REP(i, N) {    int tmp; cin &gt;&gt; tmp;    if(ump[tmp] &gt; 0) res++;    ump[tmp]++;}cout &lt;&lt; res &lt;&lt; endl;Submission データ構造・アルゴリズム   unordered_map          operator[]      ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC022","100","unordered_map"],
+        "url": "https://ytoku.com/writeup/ABC022B/",
+        "teaser":null},{
+        "title": "A - 加算王 \\| AtCoder Beginner Contest 023",
+        "excerpt":"A - 加算王 | AtCoder Beginner Contest 023 解法 n進数の各桁を取り扱いたい場合は，nでの商，余りを考えればいい．今回はXが10進数なので10で割った商がXの10の位で，余りが1の位になる． コーナーケース検討 2桁の入力しかないので問題ないことは保証されている． 実装 Submission データ構造・アルゴリズム   int型の扱い","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC023","100","int"],
+        "url": "https://ytoku.com/writeup/ABC023A/",
+        "teaser":null},{
+        "title": "B - 手芸王 \\| AtCoder Beginner Contest 023",
+        "excerpt":"B - 手芸王 | AtCoder Beginner Contest 023 解法 最終的に行うことは正しく生成された場合のN文字の文字列との一致検証． コーナーケース検討 手順0の場合のみ手順3nとは違う操作なので注意．手順通り行うと偶数文字になることはない． 実装 試行数を問われているので，以下のresのようにループのインデックスをループの外で宣言することでその値を利用する． int N; cin &gt;&gt; N;string S; cin &gt;&gt; S;string ans = \"b\";int res = 0;for(res = 1; ans.size() &lt; N; res++) {    if (res % 3 == 1) ans = 'a' + ans + 'c';    else if (res % 3 == 2) ans = 'c' + ans + 'a';    else ans = 'b' + ans + 'b';}if (ans == S) cout &lt;&lt; res &lt;&lt; endl;else cout &lt;&lt; -1 &lt;&lt; endl;return 0;Submission データ構造・アルゴリズム   string          比較演算子（== != &lt; &lt;= &gt; &gt;=）      ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC023","100","string"],
+        "url": "https://ytoku.com/writeup/ABC023B/",
+        "teaser":null},{
+        "title": "A - 動物園 \\| AtCoder Beginner Contest 024",
+        "excerpt":"A - 動物園 | AtCoder Beginner Contest 024 解法 コーナーケース検討 割引は全員に適用される(団体数以上の人のみではない)．割引後の価格が負になることはない(より) 実装 普通に場合分けしてもいいが，以下のように書くことで(S + T &gt;= K)はtrueならばfalseならば0にキャストされるので場合分けを式の中に含めることができ，一行で書ける． cout &lt;&lt; A*S + B*T - (S + T &gt;= K)*(S + T)*C &lt;&lt; endl;Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC024","100"],
+        "url": "https://ytoku.com/writeup/ABC024A/",
+        "teaser":null},{
+        "title": "B - 自動ドア \\| AtCoder Beginner Contest 024",
+        "excerpt":"B - 自動ドア | AtCoder Beginner Contest 024 解法 の時  までの間にドアが空いている時間はなのでこの和を取ればいい． コーナーケース検討  秒間は必ず開いている．これ だと今日じゃなくないか…？と問題文だけだと思ったが，test case 3を見ると1日を溢れていてもカウントしているようなのでそこから24時間以降のドアが空いている時間の扱いを判断する．(今日がどこまでを指しているのかがあいまいなので問題文で制約をもっとかけてほしい)この問題は一度もドアが空いている間に次の人が来ない場合に最大秒なのでギリギリint型に収まるが，sumを取る場合はlong long型の使用も検討する． 実装 Submission データ構造・アルゴリズム   min()","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC024","100","min()"],
+        "url": "https://ytoku.com/writeup/ABC024B/",
+        "teaser":null},{
+        "title": "A - 25個の文字列 \\| AtCoder Beginner Contest 025",
+        "excerpt":"A - 25個の文字列 | AtCoder Beginner Contest 025 解法 stringの配列を25個用意し辞書順に格納し，指定されたindexの文字列を返す． コーナーケース検討 1-indexでNが与えられることに注意． 実装 c++でstring同士は+で連結出来るが，char同士は出来ないことに注意する．Submission データ構造・アルゴリズム   string","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC025","100","string"],
+        "url": "https://ytoku.com/writeup/ABC025A/",
+        "teaser":null},{
+        "title": "B - 双子とスイカ割り \\| AtCoder Beginner Contest 025",
+        "excerpt":"B - 双子とスイカ割り | AtCoder Beginner Contest 025 解法 “East”,”West”どちらかを正方向とし全ての指示された距離を制約に従いならA， ならBに変換しつつ足し合わせ，その正負で方角を判断する． コーナーケース検討 出力時方角があればd &gt; 0とし，0のときはフォーマットが違うことに注意． 実装 Submission データ構造・アルゴリズム 特になし ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC025","100"],
+        "url": "https://ytoku.com/writeup/ABC025B/",
+        "teaser":null},{
+        "title": "A - 掛け算の最大値 \\| AtCoder Beginner Contest 026",
+        "excerpt":"A - 掛け算の最大値 | AtCoder Beginner Contest 026 解法 ループでA通りの積(A-i)*iのパターンを取り最大値を返す． コーナーケース検討 A*0も最大値となることはないので含めてもどちらでも構わない． 実装 Submission データ構造・アルゴリズム   特になし","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC026","100"],
+        "url": "https://ytoku.com/writeup/ABC026A/",
+        "teaser":null},{
+        "title": "B - N重丸 \\| AtCoder Beginner Contest 026",
+        "excerpt":"B - N重丸 | AtCoder Beginner Contest 026 解法 与えられる半径を降順にソートし順に加算，減算を繰り返し和を取り最後に円周率をかけ出力する． コーナーケース検討 今回は問題ないが，2乗の和等を取る時にintをはみ出ないか注意する． 実装 円周率はmath.hで定義されている．M_PIを使う．また，デフォルトでは浮動小数点数は6桁(処理系依存？)しか表示されないので，小数点第6位まで表示されるようにfixed,setprecisionを用いて出力formatを指定する．Submission データ構造・アルゴリズム   Stream manipulatorsによる出力フォーマット指定          fixed      setprecision()      ","categories": ["writeup"],
+        "tags": ["競プロ","AtCoder","ABC026","100"],
+        "url": "https://ytoku.com/writeup/ABC026B/",
         "teaser":null}]

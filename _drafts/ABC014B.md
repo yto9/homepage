@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC014 100 bit
 mathjax: true
 ---
 
-[B - 価格の合計 \| AtCoder Beginner Contest 014](https://beta.atcoder.jp/contests/abc014/tasks/abc014_2)
+[B - 価格の合計 \| AtCoder Beginner Contest 014](https://beta.atcoder.jp/contests/abc014/tasks/abc014_2){:target="_blank"}
 
 ## 解法
 問題文の誘導どおりにXの2進表記のi番目のbitが立っているかどうかを判定し和を取る．

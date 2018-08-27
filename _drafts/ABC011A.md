@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC011 100 三項演算子?
 mathjax: true
 ---
 
-[A - 来月は何月？  \| AtCoder Beginner Contest 011](https://beta.atcoder.jp/contests/abc011/tasks/abc011_1)
+[A - 来月は何月？  \| AtCoder Beginner Contest 011](https://beta.atcoder.jp/contests/abc011/tasks/abc011_1){:target="_blank"}
 
 ## 解法
 12月以外はN+1を返せばいい．

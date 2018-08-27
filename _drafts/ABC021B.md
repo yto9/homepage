@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC021 100
 mathjax: true
 ---
 
-[B - 嘘つきの高橋くん \| AtCoder Beginner Contest 021](https://beta.atcoder.jp/contests/abc021/tasks/abc021_b)
+[B - 嘘つきの高橋くん \| AtCoder Beginner Contest 021](https://beta.atcoder.jp/contests/abc021/tasks/abc021_b){:target="_blank"}
 
 ## 解法
 最短路の可能性があるかの判定問題．町同士の位置関係や距離(重み付け)等もないので，単に1度訪れた町をもう一度経由する(グラフとして見た時に閉路)場合は最短路ではないことはわかる．

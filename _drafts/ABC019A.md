@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC019 100 multiset()
 mathjax: true
 ---
 
-[A - 高橋くんと年齢 \| AtCoder Beginner Contest 019](https://beta.atcoder.jp/contests/abc019/tasks/abc019_1)
+[A - 高橋くんと年齢 \| AtCoder Beginner Contest 019](https://beta.atcoder.jp/contests/abc019/tasks/abc019_1){:target="_blank"}
 
 ## 解法
 小さい順にソートし2番目の値を出力する．

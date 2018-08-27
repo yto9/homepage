@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC104 300 int bit演算
 mathjax: true
 ---
 
-[C - All Green \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_c)
+[C - All Green \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_c){:target="_blank"}
 
 ## 解法
 $$2^{D}$$以下の変数を2進表記で考え，下位bitから順に昇順に対応する点数帯をコンプリートするか否かに紐付ける．\\

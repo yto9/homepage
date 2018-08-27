@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC001 100
 mathjax: true
 ---
 
-[A - Rated for Me \| AtCoder Beginner Contest 001](https://beta.atcoder.jp/contests/abc001/tasks/abc001_1)
+[A - Rated for Me \| AtCoder Beginner Contest 001](https://beta.atcoder.jp/contests/abc001/tasks/abc001_1){:target="_blank"}
 
 ## 解法
 

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC013 100 min() abs()
 mathjax: true
 ---
 
-[B - 錠 \| AtCoder Beginner Contest 013](https://beta.atcoder.jp/contests/abc013/tasks/abc013_2)
+[B - 錠 \| AtCoder Beginner Contest 013](https://beta.atcoder.jp/contests/abc013/tasks/abc013_2){:target="_blank"}
 
 ## 解法
 0->9, 9->0をまたぐ場合とまたがない場合のうち小さい方を出力する．

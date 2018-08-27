@@ -5,7 +5,7 @@ title: A - けんしょう先生のお菓子配り \| AtCoder Beginner Contest 0
 tags: 競プロ AtCoder ABC014 100 int 三項演算子?
 ---
 
-[A - けんしょう先生のお菓子配り \| AtCoder Beginner Contest 014](https://beta.atcoder.jp/contests/abc014/tasks/abc014_1)
+[A - けんしょう先生のお菓子配り \| AtCoder Beginner Contest 014](https://beta.atcoder.jp/contests/abc014/tasks/abc014_1){:target="_blank"}
 
 ## 解法
 買い足す個数は

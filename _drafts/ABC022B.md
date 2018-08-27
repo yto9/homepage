@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC022 100 unordered_map
 mathjax: true
 ---
 
-[B - Bumble Bee \| AtCoder Beginner Contest 022](https://beta.atcoder.jp/contests/abc022/tasks/abc022_b)
+[B - Bumble Bee \| AtCoder Beginner Contest 022](https://beta.atcoder.jp/contests/abc022/tasks/abc022_b){:target="_blank"}
 
 ## 解法
 出てきた順に格納しておき，二度目以降の場合にはカウントしていく．

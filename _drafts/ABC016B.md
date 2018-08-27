@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC016 100
 mathjax: true
 ---
 
-[B - A±B Problem \| AtCoder Beginner Contest 016](https://beta.atcoder.jp/contests/abc016/tasks/abc016_2)
+[B - A±B Problem \| AtCoder Beginner Contest 016](https://beta.atcoder.jp/contests/abc016/tasks/abc016_2){:target="_blank"}
 
 ## 解法
 問題分から条件は2つありそれぞれの条件を満たす場合をp,mとした時

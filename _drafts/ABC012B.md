@@ -2,7 +2,7 @@
 layout: single
 categories: writeup
 title: B - 入浴時間 \| AtCoder Beginner Contest 012
-tags: 競プロ AtCoder ABC012 100 setw() setfill() int
+tags: 競プロ AtCoder ABC012 100 stream_manipulators int
 mathjax: true
 ---
 
@@ -30,5 +30,6 @@ cout << setfill('0') << setw(2) << h << ":" << setw(2) << m << ":" << setw(2) <<
 
 ### データ構造・アルゴリズム
 - int型の除算
-- [setfill()](http://www.cplusplus.com/reference/iomanip/setfill/)
-- [setw()](http://www.cplusplus.com/reference/iomanip/setw/)
+- [Stream manipulators](http://www.cplusplus.com/reference/library/manipulators/)による出力フォーマット指定
+    - [setfill()](http://www.cplusplus.com/reference/iomanip/setfill/)
+    - [setw()](http://www.cplusplus.com/reference/iomanip/setw/)

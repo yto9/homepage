@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC009 100
 mathjax: true
 ---
 
-[B - 心配性な富豪、ファミリーレストランに行く。  \| AtCoder Beginner Contest 009](https://beta.atcoder.jp/contests/abc009/tasks/abc009_2)
+[B - 心配性な富豪、ファミリーレストランに行く。  \| AtCoder Beginner Contest 009](https://beta.atcoder.jp/contests/abc009/tasks/abc009_2){:target="_blank"}
 
 ## 解法
 文章量の割に必要な情報が少ない．\\

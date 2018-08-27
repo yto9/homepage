@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC008 100 unordered_map max_element()
 mathjax: true
 ---
 
-[B - 投票 \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_2)
+[B - 投票 \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_2){:target="_blank"}
 
 ## 解法
 名前をkeyとしてその得票数をvalueとする連想配列を用いそこから最大valueを持つkeyを返す．\\
@@ -39,6 +39,6 @@ cout << it.first << endl;
 [Submission](https://beta.atcoder.jp/contests/abc008/submissions/3005877){:target="_blank"}
 
 ### データ構造・アルゴリズム
-- unordered_map
-    - operator[]
-- max_element()
+- [unordered_map](http://www.cplusplus.com/reference/unordered_map/unordered_map/)
+    - [operator[]](http://www.cplusplus.com/reference/unordered_map/unordered_map/operator[]/)
+- [max_element()](http://www.cplusplus.com/reference/algorithm/max_element/)

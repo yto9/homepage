@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC104 200 isupper() ascii
 ---
 
 
-[B - AcCepted \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_b)
+[B - AcCepted \| AtCoder Beginner Contest 104](https://abc104.contest.atcoder.jp/tasks/abc104_b){:target="_blank"}
 
 ## 解法
 - 1文字目'A'判定

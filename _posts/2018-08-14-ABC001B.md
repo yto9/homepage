@@ -2,12 +2,12 @@
 layout: single
 categories: writeup
 title: B - 視程の通報 \| AtCoder Beginner Contest 001
-tags: 競プロ AtCoder ABC001 100 setfill() setw() right() left() internal()
+tags: 競プロ AtCoder ABC001 100 stream_manipulators
 mathjax: true
 ---
 
 
-[B - 視程の通報 \| AtCoder Beginner Contest 001](https://beta.atcoder.jp/contests/abc001/tasks/abc001_2)
+[B - 視程の通報 \| AtCoder Beginner Contest 001](https://beta.atcoder.jp/contests/abc001/tasks/abc001_2){:target="_blank"}
 ## 解法
 指示通りに条件分岐するだけだが入力は$$m$$条件は$$km$$で指定されていることに注意．\\
 境界が含むかどうかに注意．

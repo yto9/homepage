@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC008 100 unordered_map max_element()
 mathjax: true
 ---
 
-[B - 投票 \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_2)
+[B - 投票 \| AtCoder Beginner Contest 008](https://beta.atcoder.jp/contests/abc008/tasks/abc008_2){:target="_blank"}
 
 ## 解法
 名前をkeyとしてその得票数をvalueとする連想配列を用いそこから最大valueを持つkeyを返す．\\

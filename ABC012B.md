@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC012 100 setw() setfill() int
 mathjax: true
 ---
 
-[B - 入浴時間 \| AtCoder Beginner Contest 012](https://beta.atcoder.jp/contests/abc012/tasks/abc012_2)
+[B - 入浴時間 \| AtCoder Beginner Contest 012](https://beta.atcoder.jp/contests/abc012/tasks/abc012_2){:target="_blank"}
 
 ## 解法
 秒を3600や60との余りや除算を用いて変換する．

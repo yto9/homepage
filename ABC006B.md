@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC006 100 初期化 メモ化 余り
 mathjax: true
 ---
 
-[B - トリボナッチ数列 \| AtCoder Beginner Contest 006](https://beta.atcoder.jp/contests/abc006/tasks/abc006_2)
+[B - トリボナッチ数列 \| AtCoder Beginner Contest 006](https://beta.atcoder.jp/contests/abc006/tasks/abc006_2){:target="_blank"}
 
 ## 解法
 [フィボナッチ数](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0#%E9%A0%85%E6%95%B0%E3%81%AE%E5%A4%89%E6%9B%B4)の3つ版．フィボナッチは人名だが項数が増えた版は冗談のような名付けになっている．\\

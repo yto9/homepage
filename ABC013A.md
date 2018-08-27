@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC013 100 ascii
 mathjax: true
 ---
 
-[A - A \| AtCoder Beginner Contest 013](https://beta.atcoder.jp/contests/abc013/tasks/abc013_1)
+[A - A \| AtCoder Beginner Contest 013](https://beta.atcoder.jp/contests/abc013/tasks/abc013_1){:target="_blank"}
 
 ## 解法
 与えられるアルファベットがA~Eなので全パターンを直打ちしてもいいが，ascii値を使って'A'との距離を計算する．

@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC011 100 toupper() tolower()
 mathjax: true
 ---
 
-[B - 名前の確認 \| AtCoder Beginner Contest 011](https://beta.atcoder.jp/contests/abc011/tasks/abc011_2)
+[B - 名前の確認 \| AtCoder Beginner Contest 011](https://beta.atcoder.jp/contests/abc011/tasks/abc011_2){:target="_blank"}
 
 ## 解法
 1文字目だけ大文字であとは小文字にする．

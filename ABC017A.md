@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC017 100
 mathjax: true
 ---
 
-[A - プロコン \| AtCoder Beginner Contest 017](https://beta.atcoder.jp/contests/abc017/tasks/abc017_1)
+[A - プロコン \| AtCoder Beginner Contest 017](https://beta.atcoder.jp/contests/abc017/tasks/abc017_1){:target="_blank"}
 
 ## 解法
 割合の計算をして総和をとる．

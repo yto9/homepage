@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC018 100 reverse()
 mathjax: true
 ---
 
-[B - 文字列の反転 \| AtCoder Beginner Contest 018](https://beta.atcoder.jp/contests/abc018/tasks/abc018_2)
+[B - 文字列の反転 \| AtCoder Beginner Contest 018](https://beta.atcoder.jp/contests/abc018/tasks/abc018_2){:target="_blank"}
 
 ## 解法
 問題文どおりに$$l_i$$番目と$$ r_i $$番目の間の文字列を反転する．

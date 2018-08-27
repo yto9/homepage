@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC002 100 max()
 mathjax: true
 ---
 
-[A - 正直者 \| AtCoder Beginner Contest 002](https://beta.atcoder.jp/contests/abc002/tasks/abc002_1)
+[A - 正直者 \| AtCoder Beginner Contest 002](https://beta.atcoder.jp/contests/abc002/tasks/abc002_1){:target="_blank"}
 
 ## 解法
 俺も神の恵み欲しいし，高橋くんは欲望に忠実でえらい．

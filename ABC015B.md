@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC015 100 int
 mathjax: true
 ---
 
-[B - 高橋くんの集計 \| AtCoder Beginner Contest 015](https://beta.atcoder.jp/contests/abc015/tasks/abc015_2)
+[B - 高橋くんの集計 \| AtCoder Beginner Contest 015](https://beta.atcoder.jp/contests/abc015/tasks/abc015_2){:target="_blank"}
 
 ## 解法
 ループでバグの合計数とバグのあるプログラムの数を集計し，上司に報告するように平均値を整数に繰り上げて出力する．

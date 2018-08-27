@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC023 100 string
 mathjax: true
 ---
 
-[B - 手芸王 \| AtCoder Beginner Contest 023](https://beta.atcoder.jp/contests/abc023/tasks/abc023_b)
+[B - 手芸王 \| AtCoder Beginner Contest 023](https://beta.atcoder.jp/contests/abc023/tasks/abc023_b){:target="_blank"}
 
 ## 解法
 最終的に行うことは正しく生成された場合のN文字の文字列との一致検証．

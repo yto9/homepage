@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC010 100 string
 mathjax: true
 ---
 
-[A - ハンドルネーム  \| AtCoder Beginner Contest 010](https://beta.atcoder.jp/contests/abc010/tasks/abc010_1)
+[A - ハンドルネーム  \| AtCoder Beginner Contest 010](https://beta.atcoder.jp/contests/abc010/tasks/abc010_1){:target="_blank"}
 
 ## 解法
 入力に"pp"を連結して出力する．

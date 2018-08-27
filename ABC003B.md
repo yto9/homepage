@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC003 100 map 符号化
 mathjax: true
 ---
 
-[B - AtCoderトランプ \| AtCoder Beginner Contest 003](https://beta.atcoder.jp/contests/abc003/tasks/abc003_2)
+[B - AtCoderトランプ \| AtCoder Beginner Contest 003](https://beta.atcoder.jp/contests/abc003/tasks/abc003_2){:target="_blank"}
 
 ## 解法
 敗北するケースを考える

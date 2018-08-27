@@ -6,7 +6,7 @@ tags: 競プロ AtCoder ABC018 100 max() min()
 mathjax: true
 ---
 
-[A - 豆まき \| AtCoder Beginner Contest 018](https://beta.atcoder.jp/contests/abc018/tasks/abc018_1)
+[A - 豆まき \| AtCoder Beginner Contest 018](https://beta.atcoder.jp/contests/abc018/tasks/abc018_1){:target="_blank"}
 
 ## 解法
 全部で3人しかいないのでそのうち最大値の人が1位，最小値の人が3位，残りの人を2位とする．
